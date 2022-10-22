@@ -1,0 +1,87 @@
+@use "../abstracts/functions";
+
+.card {
+  flex: 1 1 calc(50% - 0.5rem);
+  display: flex;
+  // max-width: 235px; 
+  flex-direction: column;
+  gap: 0.5rem;
+  @media (min-width: 768px) {
+    flex-basis: calc(25% - 1rem);
+  }
+  @media (min-width: 1024px) {
+    flex-basis: calc(15% - 1rem);
+  }
+  &:nth-last-child(1),
+  &:nth-last-child(2) {
+    display: none;
+    @media (min-width: 768px) {
+    }
+    @media (min-width: 1024px) {
+      display: flex;
+    }
+  }
+  &__img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    @media (min-width: 768px) {
+    }
+    @media (min-width: 1024px) {
+    }
+    &-container {
+      overflow: hidden;
+      height: 174px;
+      // width: 100%;
+      @media (min-width: 768px) {
+      }
+      @media (min-width: 1024px) {
+      }
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    @media (min-width: 768px) {
+    }
+    @media (min-width: 1024px) {
+    }
+  }
+
+  &__price {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    @media (min-width: 768px) {
+    }
+    @media (min-width: 1024px) {
+    }
+  }
+
+  &__link {
+    display: flex;
+    gap: 0.25rem;
+    align-items: center;
+    text-decoration: none;
+    color: functions.css-variable(uti2-c);
+    // height: 100%;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    @media (min-width: 768px) {
+      gap: 0.55rem;
+    }
+    @media (min-width: 1024px) {
+    }
+    &-icon {
+      height: 16px;
+      // object-fit: contain;
+      @media (min-width: 768px) {
+      }
+      @media (min-width: 1024px) {
+      }
+    }
+  }
+}

@@ -1,0 +1,83 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+@use '../abstracts/functions';
+@use '../abstracts/variables';
+
+
+.main-header {
+  // background-color: rgba(yellow, 0.25);   // REMOVE
+  background-color: functions.css-variable(main-bgc);
+  position: sticky;
+  top: 0;
+  width: 100vw;
+  max-width: 100vw;
+  // height: fit-content;
+  &__wrapper {
+    max-width: variables.$max-width;
+    margin: auto;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media (min-width: 768px) {
+      padding: 1rem 2rem;
+      gap: 2rem;
+    }
+    @media (min-width: 1024px) {
+      padding: 2rem;
+    }
+  }
+  &__logo {
+    order: 0;
+    height: 100%;
+    
+    
+    
+    &-container {
+      overflow: hidden;
+      // width: fit-content;
+      flex: 0 0 100px;
+      height: 28px;
+      transition: 0.5s flex;
+      // padding: 0.25rem 0;
+      @media (min-width: 768px) {
+        
+        flex: none;
+      }
+      @media (min-width: 1024px) {
+        height: 50px;
+      }
+    }
+    &-icon {
+      height: 100%;
+    }
+  }
+  &__login-container {
+    order: 4;
+  }
+
+  &__search-form-container {
+    transition: flex 0.5s, gap 0.5s;
+    // padding: 0.5rem;
+    
+    order: 6;
+    flex: 0 0 36px;
+    // height: 36px; // Dudoso
+
+    max-width: 400px;
+
+    @media (min-width: 768px) {
+      order: 2;
+      flex: 0 0 272px;
+      margin-right: auto;
+    }
+    
+    @media (min-width: 1024px) {
+        // flex: 2 1 35%;
+        // order: 8;
+        flex-basis: 393px;
+        
+    }
+}
+}

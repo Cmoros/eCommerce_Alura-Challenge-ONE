@@ -1,0 +1,103 @@
+@use '../abstracts/functions';
+
+.search-form {
+    padding: 0.75rem 1rem;
+    // background-color: rgba(blue, 0.25);
+    
+    width: 100%;
+    // flex-basis: 100%;
+    // height: 100%;
+    transition: 0.5s flex, background 0.5s;
+    border-radius: 1.25rem;
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    @media (min-width: 768px) {
+        background-color: functions.css-variable(uti2-bgc);
+    }
+
+    &__input {
+        font-size: 0.875rem;
+        line-height: 1rem;
+
+        // color: palette.$oxford-blue;
+        // background-color: rgba(green, 0.15);
+        background-color: transparent;
+        // border-radius: 10px;
+        outline: none;
+        border: none;
+        // border: 2px solid;
+        padding: 0;
+        width: 100%;
+        min-width: 0;
+        // width: 0;
+        // &::placeholder {
+        //     text-align: center;
+        // }
+
+        @media (min-width: 768px) {
+            width: 100%;
+            // font-size: 1.3em;
+            // padding: 0.6em 40px 0.6em 1em;
+        }
+        &-container {
+            flex: 0 1 0;
+            // max-width: 0;
+            overflow: hidden;
+            // overflow: hidden;
+            transition: flex 0.5s;
+            // margin-right: -45px;
+            
+            @media (min-width:768px) {
+                flex-basis: 100%;
+            }
+        }
+
+    }
+
+    &__icon {
+        height: 100%;
+        object-fit: contain;
+    }
+    
+    &__label {
+        // flex-basis: 30px;
+        height: 100%;
+        width: 1rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        // margin-left: 10px;
+        // transform: rotateZ(0deg);
+        transition: transform 0.5s;
+        path {
+            // fill: white;
+            transition: fill 0.5s;
+            
+            @media (min-width: 768px) {
+                // fill: palette.$oxford-blue;
+            }
+            
+        }
+        @media (min-width: 768px) {
+            
+        }
+    }
+
+    &__submit {
+        position: absolute;
+        // width: 40px;
+        // background-color: red;
+        pointer-events: none;
+        opacity: 0;
+        padding: 0;
+        width: 1.5rem;
+        right: 0.75rem;
+        // height: 40px;
+        cursor: pointer;
+    }
+
+}

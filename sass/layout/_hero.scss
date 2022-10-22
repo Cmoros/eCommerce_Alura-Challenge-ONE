@@ -1,0 +1,66 @@
+@use "../abstracts/functions";
+
+.hero {
+  height: 192px;
+  width: 100%;
+  // background: url(../assets/hero.jpg) center center no-repeat
+  //     linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+  //   linear-gradient(180deg, rgba(0, 0, 0, 0) 41.15%, rgba(0, 0, 0, 0.8) 100%);
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 41.15%,
+      rgba(0, 0, 0, 0.8) 100%
+    ),
+    url(../assets/hero.jpg) center center no-repeat;
+  background-size: cover;
+
+  @media (min-width: 768px) {
+    height: 352px;
+  }
+  @media (min-width: 1024px) {
+  }
+  &__wrapper {
+    max-width: calc(2rem + 1136px);
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: flex-end;
+    align-items: flex-start;
+    height: 100%;
+    padding: 1rem;
+    color: functions.css-variable(sec-c);
+    @media (min-width: 768px) {
+      gap: 1rem;
+      padding: 2rem;
+    }
+    @media (min-width: 1024px) {
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+    @media (min-width: 768px) {
+      font-weight: 700;
+      font-size: 52px;
+      line-height: 61px;
+    }
+    @media (min-width: 1024px) {
+    }
+  }
+
+  &__subtitle {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    @media (min-width: 768px) {
+      font-weight: 600;
+      font-size: 22px;
+      line-height: 26px;
+    }
+    @media (min-width: 1024px) {
+    }
+  }
+}

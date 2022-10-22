@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+// 1. Configuration and helpers
+@use 'abstracts/variables';
+@use 'abstracts/functions';
+@use 'abstracts/mixins';
+
+// 2. Vendors
+// @use 'vendors/normalize';
+@use 'vendors/reset';
+
+// 3. Base stuff
+@use 'base/css-variables';
+@use 'base/base';
+@use 'base/fonts';
+@use 'base/typography';
+@use 'base/helpers';
+
+// 4. Layout-related sections
+@use 'layout/main-header';
+@use 'layout/main-footer';
+@use 'layout/search-form';
+@use 'layout/main-nav-search-form-toggle';
+@use 'layout/hero';
+@use 'layout/main';
+
+// 5. Components
+@use 'components/btn';
+@use 'components/section-card';
+@use 'components/card';
+
+// 6. Page-specific styles
+@use 'pages/home';
+
+// 7. Themes
+@use 'themes/default';

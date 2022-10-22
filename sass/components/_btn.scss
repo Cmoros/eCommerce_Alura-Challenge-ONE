@@ -1,0 +1,33 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+@use '../abstracts/functions';
+
+.btn {
+  border: 1px solid transparent;
+  outline: none;
+  background-color: functions.css-variable(uti1-bgc);
+  color: functions.css-variable(uti1-c);
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  @media(min-width: 1024px) {
+    font-size: 1rem;
+    line-height: 19px;
+    padding: 1rem;
+    
+  }
+  &--login {
+    background-color: functions.css-variable(main-bgc);
+    color: functions.css-variable(uti2-c);
+    border-color: functions.css-variable(uti2-c);;
+    padding: 0.75rem 3rem;
+    @media (min-width: 768px) {
+      padding: 0.75rem 4rem;
+    }
+    @media (min-width: 1024px) {
+      padding: 1rem 4.5rem;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+@use '../abstracts/functions';
+@use '../abstracts/variables';
+
+.main {
+  background-color: functions.css-variable(main-bgc);
+  padding: 2rem 0;
+  &__section-card-container {
+    margin: auto;
+    max-width: variables.$max-width;
+  }
+}

@@ -1,0 +1,38 @@
+
+@use '../abstracts/functions';
+
+.main-nav-search-form-toggle {
+    display: none;
+    @media (max-width: 767px) {
+        &:checked {
+            & ~ .main-header {
+                & .main-header__search-form-container {
+                    flex-basis: 100%;
+                    flex-shrink: 1;
+                    // margin-right: -30px;
+                    & .search-form {
+                        background-color: functions.css-variable(uti1-bgc);
+                        // gap: 10px;
+                        &__input {
+                            &-container {
+                                // max-width: max-content;
+                                flex: 1;
+                            }
+                        }
+                        &__icon {
+                            path {
+                                // fill: palette.$oxford-blue;
+                            }
+                        }
+                    }
+                }
+    
+                & .main-header__logo-container {
+                    flex: 0 0 1.75rem;
+                    // max-width: 1.75rem;
+                }
+            }
+        }
+    }
+    
+}
