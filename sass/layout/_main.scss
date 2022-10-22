@@ -8,4 +8,35 @@
     margin: auto;
     max-width: variables.$max-width;
   }
+  &__form-container {
+    max-width: variables.$max-width;
+    margin: auto;
+    width: 275px;
+    padding: 6rem 0 4.75rem;
+    @media (min-width: 768px) {
+      padding: 2.8125rem 0 3.8125rem;
+    }
+    @media (min-width: 1024px) {
+      padding: 5.6875rem 0 5.6875rem;
+      width: 423px;
+    }
+  }
+  &--form {
+    background-color: functions.css-variable(uti2-bgc);
+  }
+
+  &--alta {
+    width: 100%;
+    & .main__form-container {
+      width: 100%;
+      max-width: calc(700px + 4rem);
+      padding: 0rem 1rem 1rem; 
+    @media (min-width: 768px) {
+      padding: 0rem 2rem 2rem; 
+    }
+    @media (min-width: 1024px) {
+      padding: 2rem; 
+    }
+    }
+  }
 }

@@ -1,3 +1,110 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
+@use '../abstracts/functions';
+@use '../abstracts/mixins';
+@use '../abstracts/variables';
+
+.main-footer {
+  &__wrapper1 {
+    background-color: functions.css-variable(thi-bgc);
+    width: 100%;
+    @media (min-width: 768px) {
+    }
+  }
+  &__wrapper2 {
+    margin: auto;
+    max-width: variables.$max-width;
+    display: grid;
+    padding: 1rem;
+    gap: 2rem;
+    grid-template-areas:
+      "logo"
+      "nav"
+      "form";
+    @media (min-width: 768px) {
+      padding: 2rem;
+      grid-template-areas:
+      "logo form"
+      "nav form";
+    }
+    @media (min-width: 1024px) {
+      padding: 4rem 2rem;
+      grid-template-areas:
+      "logo nav form";
+    }
+  }
+  &__logo {
+    grid-area: logo;
+    height: 50px;
+    text-align: center;
+    
+    &-icon {
+      height: 100%;
+    }
+  }
+
+  &__nav-container {
+    grid-area: nav;
+  }
+  &__contacto-container {
+    grid-area: form;
+  }
+
+  &__wrapper3 {
+    width: 100%;
+    padding: 2rem 10px;
+    max-width: 1300px;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    @media (min-width: 768px) {
+      gap: 20px;
+    }
+  }
+
+  &__copyright {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+
+    &-container {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__link-container {
+    display: flex;
+    position: relative;
+    align-items: stretch;
+    justify-content: stretch;
+    width: 48px;
+    height: 48px;
+  }
+  &__firma {
+    display: flex;
+    flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    &-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  
+      @media (min-width: 768px) {
+        font-size: 1.5em;
+      }
+    }
+  }
+
+
+  path {
+    fill: functions.css-variable(main-c);
+    transition: fill 0.5s;
+  }
+}

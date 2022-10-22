@@ -1,0 +1,32 @@
+@use "../abstracts/functions";
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+
+.footer-nav {
+  @include mixins.display-flex(column, stretch, center);
+  gap: 1rem;
+
+  @media (min-width: 768px) {
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+  @media (min-width: 1024px) {
+  }
+
+  &__item {
+    @media (min-width: 768px) {
+    }
+    @media (min-width: 1024px) {
+    }
+  }
+  &__link {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    @media (min-width: 768px) {
+    }
+    @media (min-width: 1024px) {
+    }
+  }
+}

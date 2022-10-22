@@ -11,7 +11,7 @@
                     flex-shrink: 1;
                     // margin-right: -30px;
                     & .search-form {
-                        background-color: functions.css-variable(uti1-bgc);
+                        background-color: functions.css-variable(uti2-bgc);
                         // gap: 10px;
                         &__input {
                             &-container {
@@ -28,7 +28,10 @@
                 }
     
                 & .main-header__logo-container {
-                    flex: 0 0 1.75rem;
+                    flex: 0;
+                    @media (min-width: 425px) {
+                        flex: 0 0 1.75rem;
+                    }
                     // max-width: 1.75rem;
                 }
             }

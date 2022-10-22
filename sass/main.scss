@@ -15,6 +15,7 @@
 @use 'base/fonts';
 @use 'base/typography';
 @use 'base/helpers';
+@use 'base/utilities';
 
 // 4. Layout-related sections
 @use 'layout/main-header';
@@ -28,6 +29,10 @@
 @use 'components/btn';
 @use 'components/section-card';
 @use 'components/card';
+@use 'components/footer-nav';
+@use 'components/form';
+@use 'components/github-link';
+@use 'components/linkedin-link';
 
 // 6. Page-specific styles
 @use 'pages/home';

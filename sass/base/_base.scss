@@ -8,6 +8,8 @@
  */
 html {
   box-sizing: border-box;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 /**
@@ -23,6 +25,8 @@ html {
 }
 
 body {
+  max-width: 100vw;
+  // overflow-x: hidden;
   color: functions.css-variable(main-c);
 }
 
