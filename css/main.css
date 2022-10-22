@@ -284,6 +284,10 @@ html {
   align-items: center;
   gap: 10px;
 }
+.main-footer__wrapper3 path {
+  fill: var(--main-c);
+  transition: fill 0.5s;
+}
 @media (min-width: 768px) {
   .main-footer__wrapper3 {
     gap: 20px;
@@ -323,10 +327,6 @@ html {
   .main-footer__firma-container {
     font-size: 1.5em;
   }
-}
-.main-footer path {
-  fill: var(--main-c);
-  transition: fill 0.5s;
 }
 
 .search-form {
@@ -530,6 +530,13 @@ html {
   font-size: 0.875rem;
   text-decoration: none;
   line-height: 1rem;
+  cursor: pointer;
+  transition: color 0.15s, background 0.15s, border 0.15s;
+}
+.btn:hover, .btn:active, .btn:focus {
+  background-color: var(--main-bgc);
+  color: var(--uti2-c);
+  border-color: var(--uti2-c);
 }
 @media (min-width: 1024px) {
   .btn {
@@ -543,6 +550,11 @@ html {
   color: var(--uti2-c);
   border-color: var(--uti2-c);
   padding: 0.75rem 3rem;
+}
+.btn--login:hover, .btn--login:active, .btn--login:focus {
+  background-color: var(--uti1-bgc);
+  border-color: var(--uti1-c);
+  color: var(--uti1-c);
 }
 @media (min-width: 768px) {
   .btn--login {
@@ -648,6 +660,10 @@ html {
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
+  transition: filter 0.15s;
+}
+.card__link:hover, .card__link:active, .card__link:focus {
+  filter: brightness(1.5);
 }
 @media (min-width: 768px) {
   .card__link {
@@ -675,6 +691,10 @@ html {
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
+  cursor: pointer;
+}
+.footer-nav__link:hover, .footer-nav__link:active, .footer-nav__link:focus {
+  filter: brightness(1.5);
 }
 .form {
   display: flex;

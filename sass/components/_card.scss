@@ -72,6 +72,12 @@
     font-weight: 700;
     font-size: 14px;
     line-height: 16px;
+    transition: filter 0.15s;
+    &:hover,
+    &:active,
+    &:focus {
+      filter: brightness(1.5);
+    }
     @media (min-width: 768px) {
       gap: 0.55rem;
     }
