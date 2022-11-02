@@ -72,6 +72,7 @@ html {
   box-sizing: border-box;
   max-width: 100vw;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 /**
@@ -639,6 +640,7 @@ html {
 }
 .card__img-container {
   overflow: hidden;
+  position: relative;
   height: 174px;
 }
 .card__title {
@@ -673,6 +675,28 @@ html {
 .card__link-icon {
   height: 16px;
 }
+.card__btn-list {
+  display: flex;
+  padding: 0.25rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  gap: 0.25rem;
+}
+.card__btn-link {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+}
+.card__btn-link path {
+  transition: 0.15s fill;
+}
+.card__btn-link:hover path {
+  fill: var(--uti2-c);
+}
+
 .footer-nav {
   display: flex;
   flex-direction: column;

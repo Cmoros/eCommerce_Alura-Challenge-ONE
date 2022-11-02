@@ -1,4 +1,5 @@
 @use "../abstracts/functions";
+@use "../abstracts/mixins";
 
 .card {
   flex: 0 1 calc(50% - 0.5rem);
@@ -33,6 +34,7 @@
     }
     &-container {
       overflow: hidden;
+      position: relative;
       height: 174px;
       // width: 100%;
       @media (min-width: 768px) {
@@ -89,6 +91,34 @@
       @media (min-width: 768px) {
       }
       @media (min-width: 1024px) {
+      }
+    }
+  }
+
+  &__btn {
+    &-list {
+      display: flex;
+      padding: 0.25rem;
+      position: absolute;
+      top: 0;
+      right: 0;
+      gap: 0.25rem;
+    }
+
+    &-item {
+
+    }
+
+    &-link {
+      @include mixins.display-flex();
+      padding: 0.5rem;
+      path {
+        transition: 0.15s fill;
+      }
+      &:hover {
+        path {
+          fill: functions.css-variable(uti2-c);
+        }
       }
     }
   }
