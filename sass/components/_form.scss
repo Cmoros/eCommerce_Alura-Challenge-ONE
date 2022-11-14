@@ -30,7 +30,7 @@
     }
     &:focus,
     &:not(:placeholder-shown) {
-      & + .form__label {
+      & ~ .form__label {
         top: 0.5rem;
         font-size: 0.75rem;
       }
@@ -55,7 +55,8 @@
     position: absolute;
     top: 1rem;
     left: 0.75rem;
-    background-color: functions.css-variable(main-bgc);
+    // background-color: functions.css-variable(main-bgc);
+    background-color: transparent;
     color: functions.css-variable(uti3-c);
     transition: all 0.2s, 0.5s border, 0.5s background, 0.5s color;
     // transition: all 0.2s;
@@ -83,7 +84,7 @@
     }
     &:focus,
     &:not(:placeholder-shown) {
-      & + .form__label {
+      & ~ .form__label {
         top: 0.5rem;
         font-size: 0.75rem;
       }

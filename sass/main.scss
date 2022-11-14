@@ -33,6 +33,7 @@
 @use 'components/form';
 @use 'components/github-link';
 @use 'components/linkedin-link';
+@use 'components/error-display__popup';
 
 // 6. Page-specific styles
 @use 'pages/home';

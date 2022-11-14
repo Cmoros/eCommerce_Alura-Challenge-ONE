@@ -424,7 +424,7 @@ html {
 .hero {
   height: 192px;
   width: 100%;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 41.15%, rgba(0, 0, 0, 0.8) 100%), url(../assets/hero.png) center center no-repeat;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 41.15%, rgba(0, 0, 0, 0.8) 100%), url(../hero.png) center center no-repeat;
   background-size: cover;
 }
 @media (min-width: 768px) {
@@ -747,7 +747,7 @@ html {
 .form__input::placeholder {
   color: transparent;
 }
-.form__input:focus + .form__label, .form__input:not(:placeholder-shown) + .form__label {
+.form__input:focus ~ .form__label, .form__input:not(:placeholder-shown) ~ .form__label {
   top: 0.5rem;
   font-size: 0.75rem;
 }
@@ -765,7 +765,7 @@ html {
   position: absolute;
   top: 1rem;
   left: 0.75rem;
-  background-color: var(--main-bgc);
+  background-color: transparent;
   color: var(--uti3-c);
   transition: all 0.2s, 0.5s border, 0.5s background, 0.5s color;
 }
@@ -788,7 +788,7 @@ html {
 .form__textarea::placeholder {
   color: transparent;
 }
-.form__textarea:focus + .form__label, .form__textarea:not(:placeholder-shown) + .form__label {
+.form__textarea:focus ~ .form__label, .form__textarea:not(:placeholder-shown) ~ .form__label {
   top: 0.5rem;
   font-size: 0.75rem;
 }
@@ -863,6 +863,38 @@ html {
 }
 .linkedin-link:hover > .linkedin-link__svg--hover-show {
   display: block;
+}
+
+.error-display__popup {
+  font-size: 0.7em;
+  color: #cb7678;
+  font-weight: 600;
+  font-family: "Roboto", sans-serif;
+  position: absolute;
+  bottom: -15px;
+  right: 0;
+  padding: 0.5em;
+}
+.error-display__popup-input-error {
+  background-color: #f1c3c4;
+}
+.error-display__popup-input-check {
+  background: url(/assets/check.svg) no-repeat right;
+  background-size: 1.5rem;
+  background-color: white;
+  background-position-x: calc(100% - 1rem);
+  background-position-y: center;
+}
+@media (min-width: 425px) {
+  .error-display__popup {
+    bottom: -15px;
+  }
+}
+@media (min-width: 768px) {
+  .error-display__popup {
+    bottom: -20px;
+    font-size: 0.9em;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

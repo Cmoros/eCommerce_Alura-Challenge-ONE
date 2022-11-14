@@ -1,0 +1,18 @@
+{{#if products.length}}
+{{#each products}}
+<div class="card {{#if page}}card--{{page}}{{/if}}">
+  <div class="card__img-container">
+    <img
+      class="card__img"
+      src="{{#if imageUrl}}{{imageUrl}}{{else}}../assets/products/default.png{{/if}}"
+      alt="Producto {{category}}"
+    />
+  </div>
+  <h3 class="card__title">{{name}}</h3>
+  <p class="card__price">$ {{price}},00</p>
+  <a href="#/products/{{id}}" class="card__link">Ver producto</a>
+</div>
+{{/each}}
+{{else}}
+<p>No se consiguieron productos</p>
+{{/if}}

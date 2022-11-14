@@ -1,0 +1,149 @@
+{
+  "product": [
+    {
+      "id": 1,
+      "name": "Producto XYZ",
+      "price": 60,
+      "category": "StarWars",
+      "imageUrl": "../assets/products/StarWars/star-wars_1.svg"
+    },
+    {
+      "id": 2,
+      "name": "Producto XYZ",
+      "price": 60,
+      "category": "StarWars",
+      "imageUrl": "../assets/products/StarWars/star-wars_2.svg"
+    },
+    {
+      "id": 3,
+      "name": "Producto XYZ",
+      "price": 60,
+      "category": "StarWars",
+      "imageUrl": "../assets/products/StarWars/star-wars_3.svg"
+    },
+    {
+      "id": 4,
+      "name": "Producto XYZ",
+      "price": 60,
+      "category": "StarWars",
+      "imageUrl": "../assets/products/StarWars/star-wars_4.svg"
+    },
+    {
+      "id": 5,
+      "name": "Producto XYZ",
+      "price": 60,
+      "category": "StarWars",
+      "imageUrl": "../assets/products/StarWars/star-wars_5.svg"
+    },
+    {
+      "id": 6,
+      "name": "Producto XYZ",
+      "price": 60,
+      "category": "StarWars",
+      "imageUrl": "../assets/products/StarWars/star-wars_6.svg"
+    },
+    {
+      "id": 7,
+      "name": "Control y consola XYZ",
+      "price": 60,
+      "category": "Consolas",
+      "imageUrl": "../assets/products/Consolas/consolas_1.svg"
+    },
+    {
+      "id": 8,
+      "name": "Consola XYZ",
+      "price": 60,
+      "category": "Consolas",
+      "imageUrl": "../assets/products/Consolas/consolas_2.svg"
+    },
+    {
+      "id": 9,
+      "name": "Control XYZ",
+      "price": 60,
+      "category": "Consolas",
+      "imageUrl": "../assets/products/Consolas/consolas_3.svg"
+    },
+    {
+      "id": 10,
+      "name": "Control XYZ",
+      "price": 60,
+      "category": "Consolas",
+      "imageUrl": "../assets/products/Consolas/consolas_4.svg"
+    },
+    {
+      "id": 11,
+      "name": "Consola XYZ",
+      "price": 60,
+      "category": "Consolas",
+      "imageUrl": "../assets/products/Consolas/consolas_5.svg"
+    },
+    {
+      "id": 12,
+      "name": "Game Boy Color",
+      "price": 60,
+      "category": "Consolas",
+      "imageUrl": "../assets/products/Consolas/consolas_6.svg"
+    },
+    {
+      "id": 13,
+      "name": "Camisa Atari",
+      "price": 60,
+      "category": "Diversos",
+      "imageUrl": "../assets/products/Diversos/diversos_1.svg"
+    },
+    {
+      "id": 14,
+      "name": "Camisa SNES",
+      "price": 60,
+      "category": "Diversos",
+      "imageUrl": "../assets/products/Diversos/diversos_2.svg"
+    },
+    {
+      "id": 15,
+      "name": "Control y consola XYZ",
+      "price": 60,
+      "category": "Diversos",
+      "imageUrl": "../assets/products/Diversos/diversos_3.svg"
+    },
+    {
+      "id": 16,
+      "name": "Control y consola XYZ",
+      "price": 60,
+      "category": "Diversos",
+      "imageUrl": "../assets/products/Diversos/diversos_4.svg"
+    },
+    {
+      "id": 17,
+      "name": "Control y consola XYZ",
+      "price": 60,
+      "category": "Diversos",
+      "imageUrl": "../assets/products/Diversos/diversos_5.svg"
+    },
+    {
+      "id": 18,
+      "name": "Producto XYZ",
+      "price": 60,
+      "category": "Diversos",
+      "imageUrl": "../assets/products/Diversos/diversos_6.svg"
+    }
+  ],
+  "admin": [
+    {
+      "user": "cesar",
+      "password": "1234",
+      "id": 0
+    }
+  ],
+  "message": [
+    {
+      "nosotrosName": "Nombre prueba",
+      "nosotrosMessage": "Mensaje prueba",
+      "id": "7192cb76-9b82-448c-b421-35db13caf791"
+    },
+    {
+      "nosotrosName": "sadsad",
+      "nosotrosMessage": "asd",
+      "id": "b8e55b89-2a60-4d75-85c4-7a2334e16586"
+    }
+  ]
+}
