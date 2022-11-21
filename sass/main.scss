@@ -1,42 +1,46 @@
 @charset "UTF-8";
 
 // 1. Configuration and helpers
-@use 'abstracts/variables';
-@use 'abstracts/functions';
-@use 'abstracts/mixins';
+@use "abstracts/variables";
+@use "abstracts/functions";
+@use "abstracts/mixins";
 
 // 2. Vendors
 // @use 'vendors/normalize';
-@use 'vendors/reset';
+@use "vendors/reset";
 
 // 3. Base stuff
-@use 'base/css-variables';
-@use 'base/base';
-@use 'base/fonts';
-@use 'base/typography';
-@use 'base/helpers';
-@use 'base/utilities';
+@use "base/css-variables";
+@use "base/base";
+@use "base/fonts";
+@use "base/typography";
+@use "base/helpers";
+@use "base/utilities";
+@use "base/animations";
 
 // 4. Layout-related sections
-@use 'layout/main-header';
-@use 'layout/main-footer';
-@use 'layout/search-form';
-@use 'layout/main-nav-search-form-toggle';
-@use 'layout/hero';
-@use 'layout/main';
+@use "layout/main-header";
+@use "layout/main-footer";
+@use "layout/search-form";
+@use "layout/main-nav-search-form-toggle";
+@use "layout/hero";
+@use "layout/main";
+@use "layout/modal";
 
 // 5. Components
-@use 'components/btn';
-@use 'components/section-card';
-@use 'components/card';
-@use 'components/footer-nav';
-@use 'components/form';
-@use 'components/github-link';
-@use 'components/linkedin-link';
-@use 'components/error-display__popup';
+@use "components/btn";
+@use "components/section-card";
+@use "components/card";
+@use "components/footer-nav";
+@use "components/form";
+@use "components/github-link";
+@use "components/linkedin-link";
+@use "components/error-display__popup";
+@use "components/popup";
+@use "components/spin";
 
 // 6. Page-specific styles
-@use 'pages/home';
+@use "pages/home";
 
 // 7. Themes
-@use 'themes/default';
+@use "themes/default";

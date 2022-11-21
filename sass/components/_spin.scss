@@ -1,0 +1,51 @@
+@use "../abstracts/mixins";
+@use "../abstracts/functions";
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+$spin-size: calc(50px + 1vw);
+
+.spin {
+  border: calc($spin-size / 3) solid rgba(functions.css-variable(uti2-c), 1);
+  border-radius: 50%;
+  border-top: calc($spin-size / 3) solid rgba(functions.css-variable(uti2-c), 0.9);
+  border-right: calc($spin-size / 3) solid rgba(functions.css-variable(uti2-c), 0.8);
+  border-bottom: calc($spin-size / 3) solid rgba(functions.css-variable(uti2-c), 0.7);
+  border-left: calc($spin-size / 3) solid rgba(functions.css-variable(uti2-c), 0.6);
+  width: $spin-size;
+  height: $spin-size;
+  animation: spin 1.5s linear infinite;
+  &__container {
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 99;
+    background-color: rgba(white, 0.2);
+    pointer-events: none;
+    @include mixins.display-flex;
+    // background-color: blue;
+  }
+}
+
+body > .spin__container {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+}

@@ -1,0 +1,33 @@
+{{#if products.length}}
+{{#each products}}
+<div class="card{{#if page}} card--{{page}}{{/if}}" data-id="{{id}}">
+  <div class="card__img-container">
+    {{#if page}}
+    {{else}}
+    <ul class="card__btn-list">
+      <li class="card__btn-item card__btn-item--trash"><a href=""  class="card__btn-link" data-delete="{{id}}"><svg class="proc-none" width="14" height="18"
+            viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 16C1 17.1 1.9 18 3 18H11C12.1 18 13 17.1 13 16V4H1V16ZM14 1H10.5L9.5 0H4.5L3.5 1H0V3H14V1Z"
+              fill="white" />
+          </svg></a>
+      </li>
+      <li class="card__btn-item card__btn-item--pencil"><a href="" class="card__btn-link" data-edit="{{id}}"><svg class="proc-none" width="19" height="19"
+            viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M0 15.25V19H3.75L14.81 7.94L11.06 4.19L0 15.25ZM17.71 5.04C18.1 4.65 18.1 4.02 17.71 3.63L15.37 1.29C14.98 0.899998 14.35 0.899998 13.96 1.29L12.13 3.12L15.88 6.87L17.71 5.04Z"
+              fill="white" />
+          </svg></a>
+      </li>
+      {{/if}}
+    </ul>
+    <img class="card__img" src="{{#if imageUrl}}{{imageUrl}}{{else}}../assets/products/default.png{{/if}}"
+      alt="Producto {{category}}" onerror="this.src='/assets/default.jpg'; this.onerror=''"/>
+  </div>
+  <h3 class="card__title">{{name}}</h3>
+  <p class="card__price">$ {{price}},00</p>
+  <a href="#/producto/{{id}}" class="card__link">Ver producto</a>
+</div>
+{{/each}}
+{{else}}
+<p>No se consiguieron productos</p>
+{{/if}}

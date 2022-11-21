@@ -1,0 +1,25 @@
+@use '../abstracts/functions';
+// @import url(../abstracts/_palette.scss);
+
+
+.popup {
+  opacity: 0;
+  left: 50%;
+  font-size: calc(1rem + 0.5vw);
+  padding: 0.5em 1em;
+  bottom: 100%;
+  text-align: center;
+  pointer-events: none;
+  transform: translateY(0) translateX(-50%);
+  position: fixed;
+  
+  z-index: 15;
+  // color: white;
+  // background-color: palette.$ultramarine-blue;
+  color: functions.css-variable(uti1-c);
+  // color: $ultramarine-blue;
+  background-color: functions.css-variable(uti1-bgc);
+  border: 0.2em solid;
+  border-radius: 0.5em;
+}
+

@@ -7,11 +7,14 @@
   // max-width: 235px; 
   flex-direction: column;
   gap: 0.5rem;
+  max-width: 217px;
   @media (min-width: 768px) {
     flex-basis: calc(25.25% - 1rem);
+    max-width: 220px;
   }
   @media (min-width: 1024px) {
     flex: 1 1 calc(15% - 1rem);
+    max-width: 170px;
   }
   &--inicio {
     &:nth-last-child(1),
@@ -37,9 +40,12 @@
       position: relative;
       height: 174px;
       // width: 100%;
+      
       @media (min-width: 768px) {
+        
       }
       @media (min-width: 1024px) {
+        
       }
     }
   }
@@ -104,8 +110,9 @@
       right: 0;
       gap: 0.25rem;
     }
-
+    
     &-item {
+      cursor: pointer;
 
     }
 

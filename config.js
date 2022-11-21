@@ -1,3 +1,4 @@
 export default {
-  PORT_DB: 3000,
+  PORT_DB: process.env.PORT || 3000,
+  dbPath: './db.json'
 };

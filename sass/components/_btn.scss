@@ -1,7 +1,7 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
-@use '../abstracts/functions';
+@use "../abstracts/functions";
 
 .btn {
   border: 1px solid transparent;
@@ -15,19 +15,32 @@
   line-height: 1rem;
   cursor: pointer;
   &:hover,
-    &:active,
-    &:focus {
-      background-color: functions.css-variable(main-bgc);
+  &:active,
+  &:focus {
+    background-color: functions.css-variable(main-bgc);
     color: functions.css-variable(uti2-c);
     border-color: functions.css-variable(uti2-c);
-    }
+  }
   transition: color 0.15s, background 0.15s, border 0.15s;
-  @media(min-width: 1024px) {
+  @media (min-width: 1024px) {
     font-size: 1rem;
     line-height: 19px;
     padding: 1rem;
-    
   }
+
+  &--light {
+    background-color: functions.css-variable(main-bgc);
+    color: functions.css-variable(uti2-c);
+    border-color: functions.css-variable(uti2-c);
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: functions.css-variable(uti1-bgc);
+      border-color: functions.css-variable(uti1-c);
+      color: functions.css-variable(uti1-c);
+    }
+  }
+
   &--login {
     background-color: functions.css-variable(main-bgc);
     color: functions.css-variable(uti2-c);
@@ -37,8 +50,8 @@
     &:active,
     &:focus {
       background-color: functions.css-variable(uti1-bgc);
-    border-color: functions.css-variable(uti1-c);
-    color: functions.css-variable(uti1-c);
+      border-color: functions.css-variable(uti1-c);
+      color: functions.css-variable(uti1-c);
     }
     @media (min-width: 768px) {
       padding: 0.75rem 4rem;

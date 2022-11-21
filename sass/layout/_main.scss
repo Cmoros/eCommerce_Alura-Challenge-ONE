@@ -21,6 +21,15 @@
       width: 423px;
     }
   }
+
+  &__solo-product-container {
+    margin: auto;
+    max-width: variables.$max-width;
+  }
+
+  &__text {
+    text-align: center;
+  }
   &--form {
     background-color: functions.css-variable(uti2-bgc);
   }

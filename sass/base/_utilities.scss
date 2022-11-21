@@ -5,3 +5,15 @@
 .w-100 {
   width: 100% !important;
 }
+
+.proc-none {
+  pointer-events: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.disabled {
+  opacity: 0.5;
+}

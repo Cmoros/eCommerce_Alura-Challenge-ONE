@@ -1,0 +1,39 @@
+<div class="main main--form main--alta">
+  <div class="main__form-container">
+    <form class="form form--alta" action="post" autocomplete="off">
+      <h4 class="form__title">Agregar nuevo producto</h4>
+      <div class="form__input-group">
+        <input class="form__input" type="text" name="imageUrl" placeholder="URL de la imagen" id="alta-image"
+          required>
+        <label class="form__label" for="alta-image">URL de la imagen</label>
+      </div>
+      <div class="form__input-group">
+        <input type="text" class="form__input" name="category" placeholder="Categoría" required
+          id="alta-category">
+        <label class="form__label" for="alta-category">Categoría</label>
+      </div>
+      <div class="form__input-group">
+        <input type="text" class="form__input" name="name" placeholder="Nombre del producto" required
+          id="alta-name">
+        <label class="form__label" for="alta-name">Nombre del producto</label>
+      </div>
+      <div class="form__input-group">
+        <input type="number" min="0" step="0.01" class="form__input" name="price" placeholder="Precio del producto" required
+          id="alta-price">
+        <label class="form__label" for="alta-price">Precio del producto</label>
+      </div>
+      <div class="form__input-group">
+        <textarea class="form__textarea" rows="3" cols="40" required id="alta-description"
+          placeholder="Descripción del producto" name="description"></textarea>
+        <label class="form__label" for="alta-description">Descripción del producto</label>
+      </div>
+      
+      <div class="form__btn-group">
+        <button type="submit" class="form__submit btn w-100">
+          Agregar Producto
+        </button>
+        <input type="reset" class="form__reset btn w-100 hidden btn--light" value="Cancelar Modificación">
+      </div>
+    </form>
+  </div>
+</div>

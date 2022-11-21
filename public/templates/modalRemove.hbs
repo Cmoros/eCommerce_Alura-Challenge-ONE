@@ -1,0 +1,16 @@
+<div class="modal">
+  <button class="modal__close-btn fa-solid fa-xmark"></button>
+  <div class="modal__content">
+    <h3 class="modal__text">¿Seguro de eliminar este producto?</h3>
+    <div class="modal__info">
+      <p>Id: {{id}}</p>
+      <p>Nombre: {{name}}</p>
+      <div class="modal__img-container">
+        <img class="modal__img" src="{{imageUrl}}" alt="{{name}}" onerror="this.src='/assets/default.jpg'; this.onerror=''"/>
+      </div>
+    </div>
+    <div class="modal__btns-container">
+      <button class="modal__success btn btn--success">Confirmar</button>
+    </div>
+  </div>
+</div>
