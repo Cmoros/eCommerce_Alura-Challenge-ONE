@@ -2,7 +2,7 @@ import ProductService from "../../services/ProductService.js";
 import Modal from "../modules/Modal.js";
 import popup from "../modules/popup.js";
 import paramsPage from "../paramsPage.js";
-import HbsService from "../../services/hbsService.js";
+import HbsService from "../../services/HbsService.js";
 
 export default class ProductsPage {
   static async init(params) {

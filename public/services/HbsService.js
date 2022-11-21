@@ -19,7 +19,7 @@ export default class HbsService {
     }
   }
 
-  static fillCardContainer = async (cardContainer) => {
+  static fillCardContainer = async (cardContainer, page) => {
     const category = cardContainer.dataset.category;
     const searchParams = {};
     if (category) {
@@ -31,7 +31,7 @@ export default class HbsService {
     if (products.length == 0) {
       products = await ProductService.getManyProducts({ _limit: 6 });
     }
-    products.forEach((product) => (product.page = this.page));
-    HbsService.renderTemplate('cards.hbs', {products}, cardContainer);
-  }
+    page && products.forEach((product) => (product.page = page));
+    HbsService.renderTemplate("cards.hbs", { products }, cardContainer);
+  };
 }

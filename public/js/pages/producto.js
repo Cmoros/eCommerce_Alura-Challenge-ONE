@@ -1,7 +1,7 @@
 import ProductService from "../../services/ProductService.js";
 import Modal from "../modules/Modal.js";
 import popup from "../modules/popup.js";
-import HbsService from "../../services/hbsService.js";
+import HbsService from "../../services/HbsService.js";
 
 export default class ProductPage {
   static async init(params) {
@@ -15,7 +15,7 @@ export default class ProductPage {
     );
     // this.renderTemplateCards = InicioPage.renderTemplateCards;
     // await InicioPage.fillCardContainer.call(this,this.cardContainer);
-    await HbsService.fillCardContainer(this.cardContainer);
+    await HbsService.fillCardContainer(this.cardContainer, this.page);
   }
 
   static getIdFromHash() {
