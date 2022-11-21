@@ -9,7 +9,8 @@
     "format:check": "prettier --check \"./**/*.{js,jsx}\"",
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "json-server --watch db.json --static ./public",
-    "start": "browser-sync start --server --file . --host --port 8080 --startPath index.html",
+    "start:browser": "browser-sync start --server --file . --host --port 8080 --startPath index.html",
+    "start": "json-server --watch db.json --static ./public",
     "sass:watch": "sass --watch ./sass/main.scss ./public/assets/css/main.css",
     "all": "npm-run-all --parallel server start"
   },
@@ -31,5 +32,8 @@
   },
   "devDependencies": {
     "prettier": "^2.7.1"
+  },
+  "engines": {
+    "node": "16.1"
   }
 }
