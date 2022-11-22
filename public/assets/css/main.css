@@ -1191,33 +1191,83 @@ html {
   border-radius: 0.5em;
 }
 
-@-webkit-keyframes spin {
+@keyframes block-animation {
   0% {
-    -webkit-transform: rotate(0deg);
+    background: var(--uti2-c);
+  }
+  12.5% {
+    background: var(--uti2-c);
+  }
+  12.625% {
+    background: var(--main-c);
   }
   100% {
-    -webkit-transform: rotate(360deg);
+    background: var(--main-c);
   }
 }
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+.loading-spinner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform: translateZ(0) scale(1);
+  backface-visibility: hidden;
+  transform-origin: 0 0;
 }
-.spin {
-  border: calc((50px + 1vw) / 3) solid rgba(var(--uti2-c-rgb), 1);
-  border-radius: 50%;
-  border-top: calc((50px + 1vw) / 3) solid rgba(var(--uti2-c-rgb), 0.9);
-  border-right: calc((50px + 1vw) / 3) solid rgba(var(--uti2-c-rgb), 0.8);
-  border-bottom: calc((50px + 1vw) / 3) solid rgba(var(--uti2-c-rgb), 0.7);
-  border-left: calc((50px + 1vw) / 3) solid rgba(var(--uti2-c-rgb), 0.6);
-  width: calc(50px + 1vw);
-  height: calc(50px + 1vw);
-  animation: spin 1.5s linear infinite;
+.loading-spinner-container {
+  width: 150px;
+  height: 150px;
+  display: inline-block;
+  overflow: hidden;
+  background: none;
 }
+.loading-spinner-block {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: var(--main-c);
+  animation: block-animation 1s linear infinite;
+}
+.loading-spinner-block--1 {
+  left: 28px;
+  top: 28px;
+  animation-delay: 0s;
+}
+.loading-spinner-block--2 {
+  left: 60px;
+  top: 28px;
+  animation-delay: 0.125s;
+}
+.loading-spinner-block--3 {
+  left: 92px;
+  top: 28px;
+  animation-delay: 0.25s;
+}
+.loading-spinner-block--4 {
+  left: 28px;
+  top: 60px;
+  animation-delay: 0.875s;
+}
+.loading-spinner-block--5 {
+  left: 92px;
+  top: 60px;
+  animation-delay: 0.375s;
+}
+.loading-spinner-block--6 {
+  left: 28px;
+  top: 92px;
+  animation-delay: 0.75s;
+}
+.loading-spinner-block--7 {
+  left: 60px;
+  top: 92px;
+  animation-delay: 0.625s;
+}
+.loading-spinner-block--8 {
+  left: 92px;
+  top: 92px;
+  animation-delay: 0.5s;
+}
+
 .spin__container {
   top: 0;
   right: 0;
