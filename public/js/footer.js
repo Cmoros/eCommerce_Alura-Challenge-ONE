@@ -20,13 +20,13 @@ export default class Footer {
       const data = {};
       inputs.forEach((input) => (data[input.name] = input.value));
       const message = await MessageService.createMessage(data);
-      console.log(message);
+      console.info(message);
       if (Object.keys(message).length > 0) {
-        console.log("Mensaje enviado correctamente");
+        console.info("Mensaje enviado correctamente");
         this.restartForm();
         return;
       }
-      console.log("Error enviando el mensaje");
+      console.error("Error enviando el mensaje");
     });
   }
 }

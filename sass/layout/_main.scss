@@ -2,8 +2,12 @@
 @use '../abstracts/variables';
 
 .main {
-  background-color: functions.css-variable(main-bgc);
+  background-color: functions.css-variable(uti2-bgc);
+  min-height: 50vh;
   padding: 2rem 0;
+  &--inicio {
+    background-color: functions.css-variable(uti2-bgc);
+  }
   &__section-card-container {
     margin: auto;
     max-width: variables.$max-width;

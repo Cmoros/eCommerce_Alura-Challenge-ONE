@@ -14,7 +14,7 @@ export default class BtnLogin {
     this.btnEl.addEventListener("click", async (e) => {
       if (this.loginObj.admin) {
         e.preventDefault();
-        const logoutRes = await Modal.init("/templates/modal.hbs");
+        const logoutRes = await Modal.init("modal");
         if (!logoutRes) return;
         // this.loginObj.admin = false;
         logout();
@@ -31,7 +31,6 @@ export default class BtnLogin {
     }
     BtnLogin.updatedToAdmin = admin;
     this.btnEl.innerHTML = admin ? "Logout" : "Login";
-    console.log("paramsPage", paramsPage);
     if (typeof paramsPage.current[0].updateLoginState === "function") {
       paramsPage.current[0].updateLoginState();
     }

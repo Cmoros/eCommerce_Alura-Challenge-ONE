@@ -24,15 +24,15 @@ export default class LoginPage {
       if (!params?.admin) {
         const result = await login(data.mail, data.password);
         if (result) {
-          console.log("Logeado correctamente");
+          console.info("Logeado correctamente");
           this.restartForm();
           LoginPage.updateLoginState();
           return;
         }
-        console.log("Hubo un error en el logeo");
+        console.warn("Hubo un error en el logeo");
         return;
       }
-      console.log("El usuario ya está logeado");
+      console.warn("El usuario ya está logeado");
     });
     this.loginFormHTML.querySelectorAll("[name]").forEach((field) => {
       this.loginForm.fields.push(field);

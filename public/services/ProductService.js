@@ -15,8 +15,14 @@ export default class ProductService {
     return ProductService.http.get();
   }
 
-  static getManyProducts(urlSearchParams) {
-    return ProductService.http.get(urlSearchParams);
+  static getManyProducts(query) {
+    if (
+      typeof query == "object" &&
+      !(query instanceof URLSearchParams)
+    ) {
+      query = new URLSearchParams(query);
+    }
+    return ProductService.http.get(query);
   }
 
   static createProduct(data) {

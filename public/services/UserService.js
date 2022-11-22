@@ -7,31 +7,35 @@ export default class UserService {
 
   static http = new Http(this.URL);
 
-  static getUser(id) {
-    return UserService.http.get(id);
+  static async getUser(id) {
+    if (typeof id == "object" && !(id instanceof URLSearchParams)) {
+      id = new URLSearchParams(id)
+    }
+    const user = await UserService.http.get(id);
+    return Array.isArray(user) ? user[0] : user;
   }
 
-  static getAllUsers() {
-    return UserService.http.get();
+  static async getAllUsers() {
+    return await UserService.http.get();
   }
 
-  static getManyUsers(urlSearchParams) {
-    return UserService.http.get(urlSearchParams);
+  static async getManyUsers(urlSearchParams) {
+    return await UserService.http.get(urlSearchParams);
   }
 
-  static createUser(data) {
-    return UserService.http.post(data);
+  static async createUser(data) {
+    return await UserService.http.post(data);
   }
 
-  static updateUser(id, data) {
-    return UserService.http.put(id, data);
+  static async updateUser(id, data) {
+    return await UserService.http.put(id, data);
   }
 
-  static deleteUser(id) {
-    return UserService.http.delete(id);
+  static async deleteUser(id) {
+    return await UserService.http.delete(id);
   }
 
-  static checkSuccessfulFetch(result) {
+  static async checkSuccessfulFetch(result) {
     if (Array.isArray(result)) return result.length > 0;
     return Object.keys(result).length > 0;
   }

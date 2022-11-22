@@ -1,5 +1,6 @@
 import Form from "../modules/Form.js";
 import ProductService from "../../services/ProductService.js";
+import popup from "../modules/popup.js";
 
 const errors = {
   "alta-image": {
@@ -11,23 +12,24 @@ const errors = {
     message: "Campo categoría con máximo de 30 caracteres",
   },
   "alta-name": {
-    regExp: /^.{1,20}$/,
-    message: "Campo nombre con máximo de 20 caracteres",
+    regExp: /^.{1,30}$/,
+    // Segun la consigna eran 20 pero los mismos nombres del figma no entraban
+    message: "Campo nombre con máximo de 30 caracteres",
   },
   "alta-price": {
     regExp: /^\d{1,10}$/,
     message: "Campo de nombre solo debe contener números",
   },
   "alta-description": {
-    regExp: /^.{1,150}$/,
-    message: "Campo descripción con máximo de 150 caracteres",
+    regExp: /^.{1,375}$/,
+    // Segun configna eran 150 pero la descripcion dada en la pagina individual del figma no entraba
+    message: "Campo descripción con máximo de 375 caracteres",
   },
 };
 
 export default class AltaPage {
   static async init(params) {
     this.state = params;
-    console.log(params);
     this.state.state ||= "create";
     this.id = params.id;
     this.altaFormHTML = document.querySelector(".form--alta");
@@ -62,10 +64,11 @@ export default class AltaPage {
         throw new Error("Objeto vacío devuelto por json server");
       }
       this.restartForm();
-      console.log("Producto creado correctamente:");
-      console.log(result);
+      console.info("Producto creado correctamente:");
+      console.info(result);
+      popup.init(`<i class="fa-solid fa-check"></i> Producto creado correctamente!`)
     } catch (e) {
-      console.log("Error en creación de producto: ", e);
+      console.error("Error en creación de producto: ", e);
     }
   }
 
@@ -79,10 +82,11 @@ export default class AltaPage {
       this.restartForm();
       AltaPage.state = "create";
       AltaPage.updateFormByState();
-      console.log("Producto actualizado correctamente:");
-      console.log(result);
+      console.info("Producto actualizado correctamente:");
+      console.info(result);
+      popup.init(`<i class="fa-solid fa-check"></i> Producto actualizado correctamente!`)
     } catch (e) {
-      console.log("Error en actualización de producto: ", e);
+      console.error("Error en actualización de producto: ", e);
     }
   }
 
@@ -99,7 +103,7 @@ export default class AltaPage {
       this.formSubmitBtn.innerHTML = "Agregar Producto";
       this.formResetBtn.classList.add("hidden");
     } else {
-      console.log("bug");
+      console.warn("bug");
     }
   }
 
@@ -111,11 +115,11 @@ export default class AltaPage {
       this.altaForm.enableForm();
       this.updateFormByState();
     } else {
-      this.submitBtn.innerHTML = "Disponible para Admins";
       this.state.state = "create";
       this.updateFormByState();
       this.altaForm.restartForm();
       this.altaForm.disableForm();
+      this.submitBtn.innerHTML = "Disponible para Admins";
     }
   }
 }

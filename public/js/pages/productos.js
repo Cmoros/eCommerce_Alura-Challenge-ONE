@@ -12,7 +12,7 @@ export default class ProductsPage {
       ".section-card__cards-container"
     );
     this.addEventsToCardsButtons();
-    await HbsService.fillCardContainer(this.cardsContainer)
+    await HbsService.fillCardContainer(this.cardsContainer);
   }
 
   static addEventsToCardsButtons() {
@@ -20,11 +20,14 @@ export default class ProductsPage {
       let id;
       if ((id = e.target.dataset.delete)) {
         e.preventDefault();
+        if (!this.state.login.admin) {
+          popup.init(
+            `<i class="fa-solid fa-circle-exclamation"></i> 
+            Función solo válida para usuarios logeados`
+          );
+          return;
+        }
         const productToDelete = await ProductService.getProduct(id);
-        console.log(
-          "🚀 ~ ProductosPage ~ this.cardsContainer.addEventListener ~ productToDelete",
-          productToDelete
-        );
 
         if (!ProductService.checkSuccessfulFetch(productToDelete)) {
           popup.init(
@@ -33,19 +36,15 @@ export default class ProductsPage {
           );
           return;
         }
-        const confirm = await Modal.init(
-          "/templates/modalRemove.hbs",
-          null,
-          productToDelete
-        );
+        const confirm = await Modal.init("modalRemove", null, productToDelete);
         if (!confirm) return;
         const deleted = await ProductService.deleteProduct(id);
-        console.log('🚀 ~ ProductosPage ~ this.cardsContainer.addEventListener ~ deleted', deleted);
+        console.info("Producto Eliminado:", productToDelete);
 
         // Nunca se va a activar ya que JSON server devuelve un objeto vacio cuando borra
         // if (!ProductService.checkSuccessfulFetch(deleted)) {
         //   popup.init(
-        //     `<i class="fa-solid fa-circle-exclamation"></i> 
+        //     `<i class="fa-solid fa-circle-exclamation"></i>
         //     Algo salió mal, inténtelo más tarde`
         //   );
         //   return;
@@ -55,12 +54,18 @@ export default class ProductsPage {
           `<i class="fa-solid fa-check"></i> 
           Producto eliminado correctamente`
         );
-        await this.fillCardsContainer();
+        await HbsService.fillCardContainer(this.cardsContainer);
         return;
       }
       if ((id = e.target.dataset.edit)) {
         e.preventDefault();
-        console.log("Edit");
+        if (!this.state.login.admin) {
+          popup.init(
+            `<i class="fa-solid fa-circle-exclamation"></i> 
+            Función solo válida para usuarios logeados`
+          );
+        }
+        paramsPage.alta ||= {};
         paramsPage.alta.id = id;
         paramsPage.alta.state = "update";
         window.location.hash = "#/alta";

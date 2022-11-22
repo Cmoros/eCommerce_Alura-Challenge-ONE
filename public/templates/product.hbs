@@ -3,11 +3,13 @@
     <div class="solo-product">
       <div class="solo-product__info">
         <div class="solo-product__img-container">
-          <img src="{{imageUrl}}" alt="{{name}}">
+          <img src="{{imageUrl}}" alt="{{name}}" class="solo-product__img">
         </div>
-        <p class="solo-product__name">{{name}}</p>
-        <p class="solo-product__price">{{price}}</p>
-        <p class="solo-product__description">{{description}}</p>
+        <div class="solo-product__text">
+          <p class="solo-product__name">{{name}}</p>
+          <p class="solo-product__price">$ {{price}},00</p>
+          <p class="solo-product__description">{{description}}</p>
+        </div>
       </div>
     </div>
     <div class="section-card">

@@ -16,7 +16,8 @@
     flex: 1 1 calc(15% - 1rem);
     max-width: 170px;
   }
-  &--inicio {
+  &--inicio,
+  &--producto {
     &:nth-last-child(1),
     &:nth-last-child(2) {
       display: none;
@@ -39,7 +40,7 @@
       overflow: hidden;
       position: relative;
       height: 174px;
-      // width: 100%;
+      width: 100%;
       
       @media (min-width: 768px) {
         
@@ -50,7 +51,11 @@
     }
   }
 
-  &__title {
+  &__title,
+  &__id {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     font-weight: 500;
     font-size: 14px;
     line-height: 16px;

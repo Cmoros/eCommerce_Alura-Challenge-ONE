@@ -21,12 +21,12 @@
 $spin-size: calc(50px + 1vw);
 
 .spin {
-  border: calc($spin-size / 3) solid rgba(functions.css-variable(uti2-c), 1);
+  border: calc($spin-size / 3) solid rgba(functions.css-variable(uti2-c-rgb), 1);
   border-radius: 50%;
-  border-top: calc($spin-size / 3) solid rgba(functions.css-variable(uti2-c), 0.9);
-  border-right: calc($spin-size / 3) solid rgba(functions.css-variable(uti2-c), 0.8);
-  border-bottom: calc($spin-size / 3) solid rgba(functions.css-variable(uti2-c), 0.7);
-  border-left: calc($spin-size / 3) solid rgba(functions.css-variable(uti2-c), 0.6);
+  border-top: calc($spin-size / 3) solid rgba(functions.css-variable(uti2-c-rgb), 0.9);
+  border-right: calc($spin-size / 3) solid rgba(functions.css-variable(uti2-c-rgb), 0.8);
+  border-bottom: calc($spin-size / 3) solid rgba(functions.css-variable(uti2-c-rgb), 0.7);
+  border-left: calc($spin-size / 3) solid rgba(functions.css-variable(uti2-c-rgb), 0.6);
   width: $spin-size;
   height: $spin-size;
   animation: spin 1.5s linear infinite;

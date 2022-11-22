@@ -1,17 +1,18 @@
 import Spin from "./Spin.js";
+import HbsService from "../../services/HbsService.js"
 
 let modalBG;
 const body = document.querySelector("body");
 
 export default class Modal {
-  static async init(url, fn = () => {}, objToRender = {}) {
+  static async init(hbs, fn = () => {}, objToRender = {}) {
     return new Promise(async (resolve) => {
       body.classList.add("open-modal");
-      await Modal.create(url, resolve, fn, objToRender);
+      await Modal.create(hbs, resolve, fn, objToRender);
     });
   }
 
-  static async create(url, resolve, fn, objToRender) {
+  static async create(hbs, resolve, fn, objToRender) {
     modalBG = document.createElement("div");
     modalBG.classList.add("modal__bg");
     modalBG.addEventListener("click", (e) => {
@@ -35,12 +36,7 @@ export default class Modal {
     });
     body.append(modalBG);
     Spin.init();
-    const textoToRender = await fetch(url).then((r) =>
-      r.text()
-    );
-    const template = Handlebars.compile(textoToRender);
-    const html = template({...objToRender});
-    modalBG.innerHTML = html;
+    await HbsService.renderTemplate(hbs, objToRender, modalBG)
     Spin.remove();
   }
 

@@ -1,4 +1,10 @@
 {{#if products.length}}
+<div class="section-card__header">
+  <h2 class="section-card__title">
+    Se encontraron {{products.length}} resultados {{#if q}}para {{q}} {{/if}}
+  </h2>
+</div>
+<div class="section-card__cards-container">
 {{#each products}}
 <div class="card{{#if page}} card--{{page}}{{/if}}" data-id="{{id}}">
   <div class="card__img-container">
@@ -35,5 +41,7 @@
 </div>
 {{/each}}
 {{else}}
-<p>No se consiguieron productos</p>
+<div class="section-card__header">
+  <h2 class="section-card__title">No se encontraron resultados para {{q}}</h2>
+</div>
 {{/if}}

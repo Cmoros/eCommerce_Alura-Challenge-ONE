@@ -1,13 +1,14 @@
-import { login } from "../controllers/login.controller.js";
+import { checkAdmin } from "../controllers/login.controller.js";
+import {} from "../controllers/scroll.controller.js";
 import paramsPage from "./paramsPage.js";
+import Spin from "./modules/Spin.js";
+import PageService from "../services/PageService.js";
+
 // import ImageDefault from "./modules/img.js";
 
 const exceptions = ["producto"];
 
 class Main {
-  async ajax(url, method = "get") {
-    return await fetch(url, { method: method }).then((r) => r.text());
-  }
 
   getIdFromHash() {
     let id = location.hash.slice(1);
@@ -23,33 +24,17 @@ class Main {
     return id || "inicio";
   }
 
-  getViewUrlFromId(id) {
-    return `./views/${id}.html`;
-  }
-
   getModuleUrlFromId(id) {
     return `/js/pages/${id}.js`;
   }
 
-  // setActiveLink(id) {
-  //     const links = document.querySelectorAll('.main-nav__link');
-  //     links.forEach(link => {
-  //         if (link.getAttribute('href') === `#/${id}`) {
-  //             link.classList.add('main-nav__link--active');
-  //             link.ariaCurrent = 'page';
-  //         } else {
-  //             link.classList.remove('main-nav__link--active');
-  //             link.removeAttribute('aria-current');
-  //         }
-  //     });
-  // }
-
   async initJS(id) {
     const moduleUrl = this.getModuleUrlFromId(id);
     try {
-      paramsPage[id] ||= { login: paramsPage.login };
-      console.log(`Current Params for ${id}:`);
-      console.log(paramsPage[id]);
+      paramsPage[id] ||= {};
+      paramsPage[id].login = paramsPage.login;
+      console.info(`Current Params for ${id}:`);
+      console.info(paramsPage[id]);
       const { default: module } = await import(moduleUrl);
       paramsPage.current.pop();
       paramsPage.current.push(module);
@@ -65,34 +50,25 @@ class Main {
 
   async loadTemplate() {
     const id = this.getIdFromHash();
+    const main = document.querySelector("main")
 
-    const viewUrl = this.getViewUrlFromId(id);
-    const viewContent = await this.ajax(viewUrl);
-    document.querySelector("main").innerHTML = viewContent;
-    // ImageDefault.init();
-    // this.setActiveLink(id);
+    Spin.init(main)
+    const viewContent = await PageService.getPage(id);
+    main.innerHTML = viewContent;
+    Spin.remove();
 
     await this.initJS(id);
   }
 
   async loadTemplates() {
     await this.loadTemplate();
-    window.addEventListener("hashchange", () => this.loadTemplate());
-  }
-
-  async checkAdmin() {
-    const mail = localStorage.getItem("mail");
-    const password = localStorage.getItem("password");
-    try {
-      await login(mail, password);
-    } catch (e) {
-      localStorage.removeItem("mail");
-      localStorage.removeItem("password");
-    }
+    window.addEventListener("hashchange", () => {
+      this.loadTemplate()
+    });
   }
 
   async start() {
-    await this.checkAdmin();
+    await checkAdmin();
     await this.loadTemplates();
     const { default: header } = await import("./header.js");
     await header.init();
