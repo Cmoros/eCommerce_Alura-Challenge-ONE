@@ -8,7 +8,7 @@ Es un Challenge cuyo objetivo principal es la construcción a partir de un dise�
 
 #### [🔗Link a la página del proyecto](https://cmoros-ecommerce-one.glitch.me/)
 
-
+#### [🔗Link a solo el contenido del Sprint 2](https://github.com/Cmoros/eCommerce_Alura-Challenge-ONE/tree/sprint2)
 
 ## Tecnologías:
 
@@ -17,8 +17,9 @@ Es un Challenge cuyo objetivo principal es la construcción a partir de un dise�
 - HTML5 <img src="https://user-images.githubusercontent.com/93099135/188763469-32f71d09-213e-4fa1-89b4-4a8c07e611d5.png" alt="HTML5" height="16" width="16">
 - CSS3 <img src="https://user-images.githubusercontent.com/93099135/188764077-e7311d7f-8a95-44a4-b914-8834e46e54f8.png" alt="CSS3" height="16" width="16">
 - JavaScript <img src="https://user-images.githubusercontent.com/93099135/188764300-26ad3782-654f-46d6-ac53-cb5f7ee72b9c.png" alt="JS" height="16" width="16">
-- Sass <img src="https://user-images.githubusercontent.com/93099135/188764687-d8cadfaf-b3d7-4dfb-a4b9-001f089f3364.png" alt="JS" height="16" width="16">
-- Node <img src="https://user-images.githubusercontent.com/93099135/203666241-cc695a68-8b4f-4b92-b8ee-53da689427d0.png" alt="JS" height="16" width="16">
+- Sass <img src="https://user-images.githubusercontent.com/93099135/188764687-d8cadfaf-b3d7-4dfb-a4b9-001f089f3364.png" alt="SASS" height="16" width="16">
+- Node <img src="https://user-images.githubusercontent.com/93099135/203666241-cc695a68-8b4f-4b92-b8ee-53da689427d0.png" alt="NODEJS" height="16" width="16">
+- Handlebars <img src="https://user-images.githubusercontent.com/93099135/203695688-31f611c5-464f-4181-82ce-80b4986388f5.png" alt="HBS" height="16" width="16">
 
 ### Extra:
 
@@ -29,51 +30,27 @@ Es un Challenge cuyo objetivo principal es la construcción a partir de un dise�
 
 ## Sobre el Desafío:
 
-## Sprint 02: 
-
-
 ### Requisitos:
 
-Debe tener un menú de navegación.
-Debe tener una imagen que se utilizará como banner.
-Debe contener una sección sobre mí.
+Historia
 
-Debe tener una foto de perfil.
-Debe incluir enlaces a sus redes sociales.
-Debe tener sus datos personales:
+La empresa AluraGeek necesita llegar a más clientes y aumentar su nivel de ventas, por lo que quieren implementar un e-commerce, llevar a la empresa al siguiente nivel y volverse más digital.
 
-    1) Nombre
-    2) Edad
-    3) Nacionalidad
-    4) Biografía
+Para ello están pidiendo nuestra ayuda como desarrolladores, el e-commerce debe contener los siguientes requisitos:
+- Una página de inicio que contiene un botón de inicio de sesión y un motor de búsqueda de productos ofrecidos por la empresa.
+- Un banner que contenga descuentos, promociones o informaciónes relevante del momento.
+- Una galería con información del producto, como imagen, nombre del producto, precio y un enlace a la página de descripción del producto.
+- Una página de producto que contiene la imagen, el nombre, la descripción y el precio.
+- Un pie de página con un formulario de contacto y otras informaciónes relevantes.
+- Un formulário de iniciar sesión para autenticar a los usuarios que quieran acceder al menu administrador.
+- Menú de administrador para que puedan agregar, editar, buscar o eliminar productos de la tienda.
 
-Debe tener una sección de Hobbies y Soft Skills
-Por ejemplo:
-Pasatiempos: actividades que disfruta hacer.
-Habilidades blandas: comunicación, liderazgo, empatía …
+Es muy importante que el sitio sea adaptable para que los clientes puedan comprar fácilmente a través de dispositivos móviles.
 
-Debe tener una sección de formación y cursos.
-Aquí puedes poner las formaciones y cursos que has realizado, aunque no esté en el área de programación.
-Debe tener experiencia en la sección de programación.
-Aquí puedes poner los proyectos que ya has realizado anteriormente, como por ejemplo: los proyectos del retador principiante en programación.
-Debe tener un formulario de contacto con los siguientes campos
-
-    1) Correo electrónico
-    2) Nombre
-    3) Asunto
-    4) Mensaje
-       
- 
-Debe tener un Pie de página con la información de la persona que desarrolló el portafolio.
-Es de extrema importancia que el portafolio sea responsivo, lo que quiere decir que debe adaptarse a los diferentes tamaños de pantallas, pudiendo ser desktop, tablet o celular.
-Importante: Todas las imagenes estaran disponible en el Figma para hacer descarga.
-
-### Extras:
-- La página debe contener un botón que le permita ver, en una nueva pestaña, una versión PDF de su currículum.
 
 ## Otras caracteristicas:
 
-En esta ocasión, se agarró el concepto principal de la [plantilla propuesta por el equipo de Alura](https://www.figma.com/file/o2di04LyhIgUoAbkNLde80/Portafolio?node-id=1%3A29), a la vez que se dieron unos pocos toques personales para conservar el diseño responsive , para poder practicar y simular un ambiente de trabajo en el que se trata de imitar un modelo con colores, imagenes y medidas otorgadas.
+En esta ocasión, se agarró el concepto principal de la [plantilla propuesta por el equipo de Alura](https://www.figma.com/file/NUd563IRcuwUGyFGTwPP5W/AluraGeek?node-id=1%3A34), a la vez que se dieron unos pocos toques personales para conservar el diseño responsive, para poder practicar y simular un ambiente de trabajo en el que se trata de imitar un modelo con colores, imagenes y medidas otorgadas.
 
 ---
 
@@ -81,8 +58,8 @@ En esta ocasión, se agarró el concepto principal de la [plantilla propuesta po
 
 Responsive Design y Ejemplo de navegación
 
-https://user-images.githubusercontent.com/93099135/197118611-db7ca417-e8f3-46e2-9c59-c44a0c0de1e9.mp4
+
 
 ---
 
-## [🔗Link a GitHub Page del proyecto](https://cmoros.github.io/Portafolio_Alura-Challenge-ONE/)
+## [🔗Link a GitHub Page del proyecto](https://cmoros-ecommerce-one.glitch.me/)
