@@ -9,11 +9,10 @@ import PageService from "../services/PageService.js";
 const exceptions = ["producto"];
 
 class Main {
-
   getIdFromHash() {
     let id = location.hash.slice(1);
     for (const exception of exceptions) {
-      if (id.split('/').includes(exception)) {
+      if (id.split("/").includes(exception)) {
         id = exception;
         break;
       }
@@ -50,10 +49,11 @@ class Main {
 
   async loadTemplate() {
     const id = this.getIdFromHash();
-    const main = document.querySelector("main")
+    const main = document.querySelector("main");
 
-    Spin.init(main)
+    Spin.init(main);
     const viewContent = await PageService.getPage(id);
+    this.updateTitle(id)
     main.innerHTML = viewContent;
     Spin.remove();
 
@@ -63,8 +63,13 @@ class Main {
   async loadTemplates() {
     await this.loadTemplate();
     window.addEventListener("hashchange", () => {
-      this.loadTemplate()
+      this.loadTemplate();
     });
+  }
+
+  updateTitle(id) {
+    id = id[0].toUpperCase() + id.slice(1);
+    document.title = `${id} - Alura Geek - Cesar Moros`;
   }
 
   async start() {
