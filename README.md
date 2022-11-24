@@ -40,6 +40,10 @@ Es un Challenge cuyo objetivo principal es la construcción a partir de un dise�
    ```sh
    npm install
    ```
+3. Start the server
+   ```sh
+   npm start
+   ```
 
 ## Sobre el Desafío:
 
