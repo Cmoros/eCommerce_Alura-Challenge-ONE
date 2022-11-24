@@ -28,6 +28,19 @@ Es un Challenge cuyo objetivo principal es la construcción a partir de un dise�
 - CRUD (Create, Read, Update y Delete)
 - SPA (Single Page Application)
 
+## Getting Started
+
+### Instalación
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/Cmoros/eCommerce_Alura-Challenge-ONE.git
+   ```
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
+
 ## Sobre el Desafío:
 
 ### Requisitos:
@@ -57,8 +70,6 @@ En esta ocasión, se agarró el concepto principal de la [plantilla propuesta po
 ## Galería:
 
 Responsive Design y Ejemplo de navegación
-
-
 
 ---
 
