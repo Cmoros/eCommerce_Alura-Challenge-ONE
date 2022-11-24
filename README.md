@@ -14,11 +14,11 @@ Es un Challenge cuyo objetivo principal es la construcci√≥n a partir de un dise√
 
 ### Principales:
 
-- HTML5 <img src="https://user-images.githubusercontent.com/93099135/188763469-32f71d09-213e-4fa1-89b4-4a8c07e611d5.png" alt="HTML5" height="16" width="16">
-- CSS3 <img src="https://user-images.githubusercontent.com/93099135/188764077-e7311d7f-8a95-44a4-b914-8834e46e54f8.png" alt="CSS3" height="16" width="16">
-- JavaScript <img src="https://user-images.githubusercontent.com/93099135/188764300-26ad3782-654f-46d6-ac53-cb5f7ee72b9c.png" alt="JS" height="16" width="16">
-- Sass <img src="https://user-images.githubusercontent.com/93099135/188764687-d8cadfaf-b3d7-4dfb-a4b9-001f089f3364.png" alt="SASS" height="16" width="16">
-- Node <img src="https://user-images.githubusercontent.com/93099135/203666241-cc695a68-8b4f-4b92-b8ee-53da689427d0.png" alt="NODEJS" height="16" width="16">
+- ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+- ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+- ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+- ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
+- ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 - Handlebars <img src="https://user-images.githubusercontent.com/93099135/203695688-31f611c5-464f-4181-82ce-80b4986388f5.png" alt="HBS" height="16" width="16">
 
 ### Extra:
@@ -36,14 +36,18 @@ Es un Challenge cuyo objetivo principal es la construcci√≥n a partir de un dise√
    ```sh
    git clone https://github.com/Cmoros/eCommerce_Alura-Challenge-ONE.git
    ```
+   
 2. Install NPM packages
    ```sh
    npm install
    ```
+   
 3. Start the server
-   ```sh
+   ```
    npm start
    ```
+   
+4. Abre en `http://localhost:3000/` para ver el frontEnd
 
 ## Sobre el Desaf√≠o:
 
