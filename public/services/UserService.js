@@ -9,7 +9,7 @@ export default class UserService {
 
   static async getUser(id) {
     if (typeof id == "object" && !(id instanceof URLSearchParams)) {
-      id = new URLSearchParams(id)
+      id = new URLSearchParams(id);
     }
     const user = await UserService.http.get(id);
     return Array.isArray(user) ? user[0] : user;
@@ -35,7 +35,8 @@ export default class UserService {
     return await UserService.http.delete(id);
   }
 
-  static async checkSuccessfulFetch(result) {
+  static checkSuccessfulFetch(result) {
+    if (result == null) return false;
     if (Array.isArray(result)) return result.length > 0;
     return Object.keys(result).length > 0;
   }

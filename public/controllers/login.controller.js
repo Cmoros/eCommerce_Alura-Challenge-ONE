@@ -4,21 +4,29 @@ import popup from "../js/modules/popup.js";
 
 export async function login(mail, password) {
   if (paramsPage.login.admin) {
-    popup.init(`<i class="fa-solid fa-bug"></i> Usuario ya logeado`)
+    popup.init(`<i class="fa-solid fa-bug"></i> Usuario ya logeado`);
     return true;
   }
   if (!mail || !password) return false;
-  let result = await UserService.getUser({mail, password});
+  const result = await UserService.getUser({ mail, password });
+  debugger
+  console.log("🚀 ~ login ~ result", result);
+  console.log(
+    "UserService.checkSuccessfulFetch(result)",
+    UserService.checkSuccessfulFetch(result)
+  );
   if (!UserService.checkSuccessfulFetch(result)) {
-    popup.init(`<i class="fa-solid fa-xmark"></i> Error en password o mail`)
+    popup.init(`<i class="fa-solid fa-xmark"></i> Error en password o mail`);
     return false;
   }
   localStorage.setItem("mail", result.mail);
   localStorage.setItem("password", result.password);
   paramsPage.login.admin = true;
   paramsPage.login.mail = mail;
-  paramsPage.login.password = password
-  popup.init(`<i class="fa-solid fa-check"></i> Usuario logeado correctamente! Bienvenido`)
+  paramsPage.login.password = password;
+  popup.init(
+    `<i class="fa-solid fa-check"></i> Usuario logeado correctamente! Bienvenido`
+  );
   return true;
 }
 
@@ -30,7 +38,9 @@ export function logout() {
   localStorage.removeItem("mail");
   localStorage.removeItem("password");
   paramsPage.login.admin = false;
-  popup.init(`<i class="fa-solid fa-check"></i> Usuario deslogeado correctamente`)
+  popup.init(
+    `<i class="fa-solid fa-check"></i> Usuario deslogeado correctamente`
+  );
 }
 
 export async function checkAdmin() {
