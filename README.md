@@ -77,7 +77,9 @@ En esta ocasión, se agarró el concepto principal de la [plantilla propuesta po
 
 ## Galería:
 
-Responsive Design y Ejemplo de navegación
+Ejemplo de Uso y Demostración de CRUD y autenticación de usuarios
+
+https://user-images.githubusercontent.com/93099135/203828800-e5754578-d761-4b31-9c39-0e9c572e6437.mp4
 
 ---
 
