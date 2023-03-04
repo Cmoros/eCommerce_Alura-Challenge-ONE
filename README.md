@@ -1,4 +1,4 @@
-# Portafolio - Alura Challenge - Challenge ONE
+# eCommerce - Alura Challenge - Challenge ONE
 
 ### Sprint 2 y 3 - Challenge ONE: Front End
 
